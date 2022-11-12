@@ -21,6 +21,8 @@ global.app = {
     plugins
 }
 
+console.log(app.path.src.images)
+
 function watcher() {
     gulp.watch(path.watch.files, copy)
     gulp.watch(path.watch.html, html)

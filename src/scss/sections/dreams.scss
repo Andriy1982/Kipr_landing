@@ -1,0 +1,102 @@
+.dreams {
+    width: 100%;
+    padding: 70px 0 300px ;
+    // height: 800px;
+    background-image: url(../../img/section_dreams_mobile.png);
+    // background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // padding-top: 70px;
+
+    @media (min-width: 768px) {
+        background-image: url(../../img/section_dreams.png);
+    }
+
+    &__title {
+        // color: #252525;
+        // padding: 0 20%;
+        margin-bottom: 70px;
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: radial-gradient(46.43% 72.12% at 44.24% 46.07%, #252525 0%, #4E4E4E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        &-accent {
+           
+            font-family: 'Berlingske Serif';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            text-transform: none;
+        }
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        row-gap: 80px;
+
+        &-item {
+            width: 250px;
+
+            &-iconWrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: linear-gradient(360deg, #6189E0 -3.75%, #7DA4F4 100%);
+                box-shadow: 0px 1px 0px #6D90A3, inset 0px 0px 21px rgba(255, 255, 255, 0.23);
+                margin: 0 auto 30px;
+
+                &::before {
+                    display: block;
+                    content: " ";
+                    width: 25px;
+                    height: 25px;
+                    background: url('../img/icons/icons.svg#sea') no-repeat center;
+                }
+            }
+
+            &-description {
+                text-align: center;
+                font-family: 'TT Firs Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* or 133% */
+
+text-align: center;
+
+/* Radial */
+
+background: radial-gradient(46.43% 72.12% at 44.24% 46.07%, #252525 0%, #4E4E4E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+// text-fill-color: transparent;
+
+            }
+        }
+    }
+}
+
