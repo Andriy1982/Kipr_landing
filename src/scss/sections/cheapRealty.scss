@@ -1,24 +1,43 @@
 .cheapRealty {
-    padding: 40px 38px;
-    // width: 100%;
-    // padding: 100px 0 150px 380px;
-    // background-image: url(../../img/section_cheapRealty_mobile.png);
-    // background-size: contain;
-    // background-position: center;
-    // background-repeat: no-repeat;
- 
-    // padding-top: 70px;
-    background: #F7F7F7 url(../../img/section_cheapRealty_mobile.png) no-repeat right 120px ;
+    padding: 40px 0px;
+    background: #F7F7F7 url(../../img/section_cheapRealty_mobile.png) no-repeat right 90px ;
     // background-size: contain;
 
-    @media (min-width: 768px) {
-        background-image: url(../../img/section_dreams.png);
+    @media (min-width: $sm) {
+    //    padding-left: 60px;
+    //    padding-right: 60px;
+       background-position-y: 50px;
     }
+
+    @media (min-width: $md) {
+        background-position-y: 100px;
+    }
+
+    @media (min-width: $xl) {
+        padding-top: 100px;
+        padding-bottom: 148px;
+        background-image: url(../../img/section_cheapRealty.png);
+    }
+
+    & .container {
+        padding: 0px 38px;
+
+        @media (min-width: $sm) {
+            padding: 0px 60px;
+         }
+
+        @media (min-width: $xl) {
+            padding: 0px;
+            max-width: 899px;
+            margin: 0 auto;
+         }
+    }  
+ 
 
     &__title {
         // color: #252525;
         // padding: 0 20%;
-        margin-bottom: 300px;
+        margin-bottom: 320px;
         font-family: 'Forum';
         font-style: normal;
         font-weight: 400;
@@ -32,8 +51,20 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
 
+        @media (min-width: $sm) {
+            margin-bottom: 300px;
+         }
+
+          @media (min-width: $md) {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $xl) {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
         &-accent {
-           
             font-family: 'Berlingske Serif';
             font-style: italic;
             font-weight: 400;
@@ -45,6 +76,10 @@
 
         & span {
             display: block;
+
+            @media (min-width: $xl) {
+                display: none;
+            }
         }
     }
 
@@ -53,57 +88,99 @@
         // grid-template-columns: 1fr 1fr;
         // grid-template-rows: 1fr 1fr;
         // justify-items: center;
-        row-gap: 80px;
+        row-gap: 15px;
+        padding-left: 20px;
+
+        @media (min-width: $md) {
+            width: 60%;
+          }
 
         &-item {
-            width: 250px;
+            position: relative;
+            background: #FFFFFF;
+            border-radius: 5px;
+            padding: 20px 10px 20px 38px;
+            // width: 250px;
 
-            &::before {
-                display: block;
-                content: " ";
-                width: 25px;
-                height: 25px;
-                background: url('../img/icons/icons.svg#sea') no-repeat center;
-            }
+            // &::before {
+            //     display: block;
+            //     content: " ";
+            //     width: 25px;
+            //     height: 25px;
+            //     background: url('../img/icons/icons.svg#sea') no-repeat center;
+            // }
+
+            // @media (min-width: $md) {
+            //   width: 60%;
+            // }
 
             &-iconWrap {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 80px;
-                height: 80px;
+                width: 43px;
+                height: 43px;
                 border-radius: 50%;
-                background: linear-gradient(360deg, #6189E0 -3.75%, #7DA4F4 100%);
-                box-shadow: 0px 1px 0px #6D90A3, inset 0px 0px 21px rgba(255, 255, 255, 0.23);
-                margin: 0 auto 30px;
+                // background-color: #E88484;
+                background: #E88484 no-repeat center;
+                background-size: 45%;
+                // box-shadow: 0px 1px 0px #6D90A3, inset 0px 0px 21px rgba(255, 255, 255, 0.23);
+                // margin: 0 auto 30px;
 
-                &::before {
+                // &::before {
+                //     display: block;
+                //     content: " ";
+                //     width: 18px;
+                //     height: 18px;
+                //     background: url('../img/icons/icons.svg#noise') no-repeat center;
+                // }
+
+                &::after {
                     display: block;
                     content: " ";
-                    width: 25px;
-                    height: 25px;
-                    background: url('../img/icons/icons.svg#sea') no-repeat center;
+                    width: 15px;
+                    height: 15px;
+                    background: #FDCACA url('../img/icons/icons.svg#close') no-repeat center;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    transform: translateX(50%);
+                    background-size: 70%;
+                }
+
+                &--noise {
+                    background-image: url('../img/icons/icons.svg#noise');
+                }
+
+                &--lock {
+                    background-image: url('../img/icons/icons.svg#lock');
+                }
+
+                &--helmet {
+                    background-image: url('../img/icons/icons.svg#helmet');
                 }
             }
 
             &-description {
-                text-align: center;
+                // text-align: center;
                 font-family: 'TT Firs Neue';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-/* or 133% */
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                background: radial-gradient(46.43% 72.12% at 44.24% 46.07%, #252525 0%, #4E4E4E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                // text-fill-color: transparent;
 
-text-align: center;
-
-/* Radial */
-
-background: radial-gradient(46.43% 72.12% at 44.24% 46.07%, #252525 0%, #4E4E4E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-// text-fill-color: transparent;
+                & span {
+                    font-weight: 600;
+                }
 
             }
         }
