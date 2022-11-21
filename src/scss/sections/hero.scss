@@ -1,0 +1,121 @@
+.hero {
+    padding: 125px 0 500px;
+    background-image: url(../img/bg_mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $md) {
+        background-image: url(../img/full_screen.png);
+        background-position: center;
+        padding: 198px 0 217px;
+    }
+
+    .container {
+        padding: 0 37px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (min-width: $md) {
+            max-width: 720px;
+            margin-left: 20%;
+            text-align: left;
+        }
+    }
+
+    &_title {
+        font-weight: 400;
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #4E4E4E;
+        margin: 0 0 5px;
+        hyphens: manual;
+
+        @media (min-width: $md) {
+            font-size: 45px;
+            line-height: 60px;
+            margin: 0;
+        }
+    }
+
+    &_subtitle {
+        font-style: italic;
+        font-size: 18px;
+        color: #252525;
+        width: 145px;
+        margin: 0 auto 15px;
+
+        @media (min-width: $md) {
+            width: 100%;
+            font-size: 25px;
+            letter-spacing: 0.05em;
+            line-height: 60px;
+            margin-bottom: 75px;
+        }
+    }
+
+    &_line {
+        display: block;
+        width: 245px;
+        height: 1px;
+        background-color: #0000001A;
+        margin: 0 auto 15px;
+
+        @media (min-width: $md) {
+            display: none;
+        }
+    }
+
+    &_description {
+        font-size: 16px;
+        color: #959090;
+        margin-bottom: 20px;
+
+        @media (min-width: $md) {
+            font-size: 18px;
+        }
+
+        span {
+            color: #252525;
+        }
+    }
+
+    &_btn {
+        width: 278px;
+        height: 71px;
+        background: linear-gradient(180deg, #F2E0A9 0%, #E8CD80 100%);
+        background-blend-mode: soft-light, normal;
+        box-shadow: inset 0px 10px 10px rgba(255, 255, 255, 0.25);
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #756532;
+    }
+
+    &_mark {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: url(../img/mark-text-bg),  linear-gradient(71.66deg, #FFFFFF 11.33%, rgba(255, 255, 255, 0.44) 98.72%),url(../img/mark-bg-mobile/png);
+        box-shadow: inset 0px 4px 20px rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(7.5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            font-size: 12px;
+            line-height: 10px; 
+            color: #6F6F6F; 
+        }
+    }
+}
