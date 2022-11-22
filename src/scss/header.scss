@@ -12,6 +12,11 @@
 }
 
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
     .container {
         max-width: 1076px;
         padding: 35px 37px 0;
