@@ -2,12 +2,13 @@
     padding: 125px 0 500px;
     background-image: url(../img/bg_mobile.png);
     background-size: cover;
-    background-position: center;
+    background-position: 50% 65%;
     background-repeat: no-repeat;
+    position: relative;
 
     @media (min-width: $md) {
         background-image: url(../img/full_screen.png);
-        background-position: center;
+        background-position: 54% 50%;
         padding: 198px 0 217px;
     }
 
@@ -18,9 +19,13 @@
         text-align: center;
 
         @media (min-width: $md) {
-            max-width: 720px;
-            margin-left: 20%;
+            max-width: 600px;
+            margin-left: 7%;
             text-align: left;
+        }
+
+        @media (min-width: 1400px) {
+            margin-left: 20%;
         }
     }
 
@@ -104,18 +109,15 @@
         width: 140px;
         height: 140px;
         border-radius: 50%;
-        background: url(../img/mark-text-bg),  linear-gradient(71.66deg, #FFFFFF 11.33%, rgba(255, 255, 255, 0.44) 98.72%),url(../img/mark-bg-mobile/png);
-        box-shadow: inset 0px 4px 20px rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(7.5px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: 75%;
+        right: 10%;
 
-        &-title {
-            font-size: 12px;
-            line-height: 10px; 
-            color: #6F6F6F; 
+        @media (min-width: $md) {
+            top: 65%;
+            left: 50%;
+            width: 235px;
+            height: 235px;
         }
     }
 }

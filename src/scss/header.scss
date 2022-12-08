@@ -1,21 +1,9 @@
-.header__wraper {
-    width: 100%;
-    height: 800px;
-    background-image: url(../img/full_screen.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    @media (max-width: 767px) {
-        background-image: url(../img/bg_mobile.png);
-        background-size: 100% 1000px;
-    }
-}
-
 header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 5;
 
     .container {
         max-width: 1076px;
